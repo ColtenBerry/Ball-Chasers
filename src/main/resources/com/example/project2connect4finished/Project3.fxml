@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#Pressed" onKeyReleased="#Released" prefHeight="515.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project2connect4finished.Project3Controller">
+   <top>
+      <HBox alignment="TOP_CENTER" prefHeight="35.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="timeLabel" alignment="TOP_LEFT" prefHeight="27.0" prefWidth="151.0" text="Time: 000.00">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="teleportQuantityLabel" contentDisplay="TOP" text="Teleport">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@teleport-removebg-preview%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="tempSpdBoostQuantityLabel" contentDisplay="TOP" prefWidth="101.0" text="Speed">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@speed-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="activePowerLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="200.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="freezeQuantityLabel" contentDisplay="TOP" text="Freeze">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@snowflakeBackground-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+            <Label fx:id="keyQuantityLabel" contentDisplay="TOP" text="Key">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Key-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="coinCountLabel" alignment="TOP_RIGHT" contentDisplay="RIGHT" prefHeight="27.0" prefWidth="135.0" text="Coins: 0" textAlignment="RIGHT">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="39.0" prefWidth="600.0" spacing="100.0" BorderPane.alignment="BOTTOM_CENTER">
+         <children>
+            <Button fx:id="store" mnemonicParsing="false" onAction="#switchToNewScene" prefHeight="25.0" prefWidth="77.0" text="Store" />
+            <Label fx:id="roundLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="71.0" text="Round">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="reset" contentDisplay="CENTER" mnemonicParsing="false" onAction="#resetButtonPressed" onKeyPressed="#Pressed" onKeyReleased="#Released" prefHeight="25.0" prefWidth="80.0" text="Reset" />
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <Pane fx:id="gameScreenPane" maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
